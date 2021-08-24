@@ -6,9 +6,11 @@ namespace GraphDSA
     public class Graph
     {
         private readonly LinkedList<int>[] _adj;
+        public int Vertices { get; }
 
         internal Graph(int length)
         {
+            Vertices = length;
             _adj = new LinkedList<int>[length];
             for (var i = 0; i < length; i++)
                 _adj[i] = new LinkedList<int>();
@@ -24,6 +26,8 @@ namespace GraphDSA
                 _adj[dest].AddLast(source);
             return true;
         }
+
+        public LinkedList<int> this[int index] => _adj[index];
 
         public void Print()
         {
