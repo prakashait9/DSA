@@ -18,8 +18,6 @@ namespace GraphDSA
             
             var queue = new Queue<int>();
             var visited = new bool[graph.Vertices];
-            for (var i = 0; i < graph.Vertices; i++)
-                visited[i] = false;
 
             visited[start] = true;
             queue.Enqueue(start);
