@@ -8,3 +8,9 @@
 
 1. [MaxHeap](Heaps/MaxHeap.cs)
 2. [MinHeap](Heaps/MinHeap.cs)
+
+# Sorting Algorithms
+
+1. [BubbleSort](Sorting/BubbleSort.cs)
+2. [SelectionSort](Sorting/SelectionSort.cs)
+3. [InsertionSort](Sorting/InsertionSort.cs)
