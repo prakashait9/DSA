@@ -4,13 +4,14 @@ namespace Sorting;
 
 public class SelectionSort : ISort
 {
-    public static void Execute(int[] array)
+    public static void Execute(int[] array, bool printArray)
     {
         var watch = Stopwatch.StartNew();
         var sorted = Sort(array);
         watch.Stop();
         Console.WriteLine($"{nameof(SelectionSort)} took {watch.ElapsedTicks} ticks, {watch.ElapsedMilliseconds}ms");
-        Console.WriteLine($"SORTED : {string.Join(", ", sorted)}");
+        if(printArray)
+            Console.WriteLine($"SORTED : {string.Join(", ", sorted)}");
     }
 
     static int[] Sort(int[] array)
