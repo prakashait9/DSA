@@ -2,14 +2,14 @@ using System.Diagnostics;
 
 namespace Sorting;
 
-public class BubbleSort : ISort
+public class SelectionSort : ISort
 {
     public static void Execute(int[] array)
     {
         var watch = Stopwatch.StartNew();
         var sorted = Sort(array);
         watch.Stop();
-        Console.WriteLine($"{nameof(BubbleSort)} took {watch.ElapsedTicks} ticks, {watch.ElapsedMilliseconds}ms");
+        Console.WriteLine($"{nameof(SelectionSort)} took {watch.ElapsedTicks} ticks, {watch.ElapsedMilliseconds}ms");
         Console.WriteLine($"SORTED : {string.Join(", ", sorted)}");
     }
 
@@ -17,11 +17,13 @@ public class BubbleSort : ISort
     {
         var len = array.Length;
         for(var i=0; i<len; i++){
-            for(var j=0; j<len; j++){
-                if(array[i] < array[j]){
-                   (array[i], array[j]) = (array[j], array[i]);
-                }
+            int minIdx = i, temp = array[i];
+            for(var j=i+1; j<len; j++){
+                if(array[j] < array[minIdx])
+                    minIdx = j;
             }
+            array[i] = array[minIdx];
+            array[minIdx] = temp;
         }
         return array;
     }

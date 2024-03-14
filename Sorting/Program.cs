@@ -9,4 +9,6 @@ var unsorted = Enumerable.Range(0, 30)
 Console.WriteLine($"UNSORTED : {string.Join(", ", unsorted)}");
 
 // O(n^2)
-BubbleSort.Execute(unsorted);
+BubbleSort.Execute((int[])unsorted.Clone());
+// O(n^2)
+SelectionSort.Execute((int[])unsorted.Clone());
