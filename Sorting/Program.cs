@@ -1,8 +1,8 @@
 ﻿using Sorting;
 
-// Change LEN to a higher value & printArray to false for clear difference
+// Change LEN to a higher value for clear difference in time complexity
 const int LEN = 30;
-bool printArray = true;
+bool printArray = LEN <= 30;
 
 // generate some random int array. 
 var random = new Random();
