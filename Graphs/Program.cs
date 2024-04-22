@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GraphDSA
+﻿namespace GraphDSA
 {
     class Program
     {
