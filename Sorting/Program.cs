@@ -2,7 +2,7 @@
 
 // Change LEN to a higher value for clear difference in time complexity
 const int LEN = 30;
-bool printArray = LEN <= 30;
+var printArray = LEN <= 30;
 
 // generate some random int array. 
 var random = new Random();

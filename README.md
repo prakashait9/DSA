@@ -17,3 +17,8 @@
 3. [InsertionSort](Sorting/InsertionSort.cs)
 4. [MergeSort](Sorting/MergeSort.cs)
 5. [QuickSort](Sorting/QuickSort.cs)
+
+# Searching Algorithms
+
+1. [LinearSearch](Searching/LinearSearch.cs)
+2. [BinarySearch](Searching/BinarySearch.cs)
