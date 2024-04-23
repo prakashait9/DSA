@@ -13,9 +13,13 @@ var unsorted = Enumerable.Range(0, LEN)
 if(printArray)
     Console.WriteLine($"UNSORTED : {string.Join(", ", unsorted)}");
 
-// O(n^2)
+// O(n^2) - keep comparing adjacent numbers and move smaller to left
 BubbleSort.Execute((int[])unsorted.Clone(), printArray);
-// O(n^2)
+// O(n^2) - in every loop, find smallest in array, move it to first
 SelectionSort.Execute((int[])unsorted.Clone(), printArray);
-// O(n^2)
+// O(n^2) - for every element, find it's suitable position on left side of that element
 InsertionSort.Execute((int[])unsorted.Clone(), printArray);
+// O(n log n) - divide and conquer
+MergeSort.Execute((int[])unsorted.Clone(), printArray);
+// O(n log n) - Take a pivot, put everything small on left of pivot, everything big on right, sort the left & right now
+QuickSort.Execute((int[])unsorted.Clone(), printArray);
